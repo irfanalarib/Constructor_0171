@@ -72,3 +72,22 @@ public:
 void dosen::beriNilai(mahasiswa* m, float nilai) {
     m->nilai = nilai;
 }
+
+int main() {
+    mahasiswa m1("Irfan", 20240140171);
+    dosen d1("Pak Haris", "9876", "Lektor", 9000000);
+    Staff s1("Pak Andi", 1001, 5000000);
+    Universitas u;
+
+    d1.beriNilai(&m1, 85.5);
+    m1.tampil();
+
+    cout << "Pangkat sebelum diubah: Lektor" << endl;
+    s1.ubahPangkat(&d1, "Guru Besar");
+    cout << "Pangkat sesudah diubah oleh staff." << endl;
+
+    u.tampilGajiDosen(&d1);
+    u.tampilGajiStaff(&s1);
+
+    return 0;
+}
