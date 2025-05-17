@@ -45,3 +45,11 @@ public:
         d->pangkat = pangkatBaru;
     }
 };
+
+float aksesGaji(dosen* d) {
+    return d->gaji;
+}
+
+float lihatGajiStaff(Staff* s) {
+    return s->gaji;
+}
