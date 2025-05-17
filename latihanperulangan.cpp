@@ -29,7 +29,7 @@ private:
 
 public:
     dosen(string n, string id, string p, float g) : nama(n), nidn(id), pangkat(p), gaji(g) {}
-    friend float aksesGaji(Dosen* d);
+    friend float aksesGaji(dosen* d);
     friend class Staff;
     void beriNilai(mahasiswa* m, float nilai);
 };
@@ -74,7 +74,7 @@ void dosen::beriNilai(mahasiswa* m, float nilai) {
 }
 
 int main() {
-    mahasiswa m1("Irfan", 20240140171);
+    mahasiswa m1("Irfan", 24171);
     dosen d1("Pak Haris", "9876", "Lektor", 9000000);
     Staff s1("Pak Andi", 1001, 5000000);
     Universitas u;
