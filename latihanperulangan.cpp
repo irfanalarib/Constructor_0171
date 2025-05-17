@@ -24,10 +24,24 @@ private:
     string nidn;
     string pangkat;
     float gaji;
-    
+
 public:
     dosen(string n, string id, string p, float g) : nama(n), nidn(id), pangkat(p), gaji(g) {}
     friend float aksesGaji(Dosen* d);
     friend class Staff;
     void beriNilai(mahasiswa* m, float nilai);
+};
+
+class Staff {
+private:
+    string nama;
+    int idStaff;
+    float gaji;
+
+public:
+    Staff(string n, int id, float g) : nama(n), idStaff(id), gaji(g) {}
+
+    void ubahPangkat(dosen* d, string pangkatBaru) {
+        d->pangkat = pangkatBaru;
+    }
 };
