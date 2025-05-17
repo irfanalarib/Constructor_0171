@@ -17,7 +17,7 @@ public:
         cout << "Nilai          : " << nilai << endl << endl;
     }
 
-    friend class Dosen;
+    friend class dosen;
 };
 
 class dosen {
@@ -46,6 +46,8 @@ public:
     void ubahPangkat(dosen* d, string pangkatBaru) {
         d->pangkat = pangkatBaru;
     }
+
+      friend float lihatGajiStaff(Staff* s);
 };
 
 float aksesGaji(dosen* d) {
