@@ -16,6 +16,18 @@ public:
         cout << "NIM            : " << nim << endl;
         cout << "Nilai          : " << nilai << endl << endl;
     }
+};
 
-    friend class Dosen;
+class dosen {
+private:
+    string nama;
+    string nidn;
+    string pangkat;
+    float gaji;
+    
+public:
+    dosen(string n, string id, string p, float g) : nama(n), nidn(id), pangkat(p), gaji(g) {}
+    friend float aksesGaji(Dosen* d);
+    friend class Staff;
+    void beriNilai(mahasiswa* m, float nilai);
 };
