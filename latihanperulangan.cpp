@@ -16,6 +16,8 @@ public:
         cout << "NIM            : " << nim << endl;
         cout << "Nilai          : " << nilai << endl << endl;
     }
+
+    friend class Dosen;
 };
 
 class dosen {
